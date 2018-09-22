@@ -1,19 +1,24 @@
 #pragma once
 #include <glad\glad.h>
-
+#include "Shader.h"
 
 class RenderManager {
 public:
-	unsigned int VBO;
-	void initRender();
-private:
 	RenderManager();
 	~RenderManager();
+	Shader* firstShader;
+	void initRender();
+	void Draw();
+private:
+	
+	unsigned int VAO, VBO;
+	
+	
 	float vertices[9] = {
 		-0.5f, -0.5f, 0.0f,
 		0.5f, -0.5f, 0.0f,
 		0.0f,  0.5f, 0.0f
 	};
-	virtual void Draw();
+	
 	
 };
