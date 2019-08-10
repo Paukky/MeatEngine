@@ -5,14 +5,14 @@
 #include <sstream>
 class Shader {
 public:
-	Shader(const char* vShaderFile, const char* vFragFile);
-	int getShaderProgram();
+	void  readCompileAttach(const char* vShaderFile, const char* vFragFile);
+	GLint &Use();
+	Shader() {};
 private:
-
+	GLint ID;
+	GLint shaderProgram;
 	int vertexShader, fragmentShader = 0;
-	int shaderProgram;
 	int success;
 	char infoLog[512];
-	void  readCompileAttach(const char* vShaderFile, const char* vFragFile);
 	std::string readTextFile(const char* ShaderFile);
 };
