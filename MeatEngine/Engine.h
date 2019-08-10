@@ -3,11 +3,11 @@
 #include "Logger.h"
 #include "InputManager.h"
 #include "RenderManager.h"
+#include "ResourceManager.h"
 
 class Engine {
 
 public:
-	RenderManager ren;
 	Engine();
 	~Engine();
 	void Start();

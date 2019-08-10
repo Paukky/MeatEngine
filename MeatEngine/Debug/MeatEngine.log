@@ -1,3 +1,11 @@
-﻿  RenderManager.cpp
-  MeatEngine.vcxproj -> C:\Users\Paul\Desktop\MeatEngine-Master\Debug\MeatEngine.exe
-  MeatEngine.vcxproj -> C:\Users\Paul\Desktop\MeatEngine-Master\Debug\MeatEngine.pdb (Partial PDB)
+﻿  Window.cpp
+  ResourceManager.cpp
+  Engine.cpp
+  Generating Code...
+c:\users\paul\documents\meatengine\meatengine\resourcemanager.cpp(40): warning C4715: 'ResourceManager::GetTexture': not all control paths return a value
+c:\users\paul\documents\meatengine\meatengine\resourcemanager.cpp(29): warning C4715: 'ResourceManager::GetShader': not all control paths return a value
+  Skipping... (no relevant changes detected)
+  Main.cpp
+LINK : warning LNK4098: defaultlib 'MSVCRT' conflicts with use of other libs; use /NODEFAULTLIB:library
+  MeatEngine.vcxproj -> C:\Users\Paul\Documents\MeatEngine\Debug\MeatEngine.exe
+  MeatEngine.vcxproj -> C:\Users\Paul\Documents\MeatEngine\Debug\MeatEngine.pdb (Partial PDB)

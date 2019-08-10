@@ -1,23 +1,12 @@
 #include "Shader.h"
 
-int Shader::getShaderProgram()
+GLint &Shader::Use()
 {
-	return shaderProgram;
+	glUseProgram(this->ID);
+	return ID;
 }
 
-Shader::Shader(const char * vShaderFile, const char * vFragFile) {
-	readCompileAttach(vShaderFile, vFragFile);	
-	glLinkProgram(shaderProgram);
-	glGetProgramiv(shaderProgram, GL_LINK_STATUS, &success);
-	if (!success) {
-		glGetProgramInfoLog(shaderProgram, 512, NULL, infoLog);
-		std::cout << "ERROR::SHADER::PROGRAM::LINKING_FAILED\n" << infoLog << std::endl;
-	}
-	glDeleteShader(vertexShader);
-	glDeleteShader(fragmentShader);
-
-}
-
+	
 void Shader::readCompileAttach(const char * vShaderFile, const char * vFragFile)
 {
 	#pragma region Vertex Shader Compilation
@@ -49,11 +38,12 @@ void Shader::readCompileAttach(const char * vShaderFile, const char * vFragFile)
 	}
 #pragma endregion
 
-	shaderProgram = glCreateProgram();
-	glAttachShader(shaderProgram, vertexShader);
-	glAttachShader(shaderProgram, fragmentShader);
-
-
+	ID = glCreateProgram();
+	glAttachShader(ID, vertexShader);
+	glAttachShader(ID, fragmentShader);
+	glLinkProgram(ID);
+	glDeleteShader(vertexShader);
+	glDeleteShader(fragmentShader);
 }
 
 std::string Shader::readTextFile(const char* shaderFile)

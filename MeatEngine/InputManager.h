@@ -9,5 +9,4 @@ private:
 public:
 	static InputManager* getInstance();
 	void processInput(GLFWwindow* window);
-
 };
