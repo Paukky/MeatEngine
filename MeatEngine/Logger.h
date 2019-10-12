@@ -15,6 +15,5 @@ private:
 public:
 	static Logger* getInstance();
 	void printMsg(const char* msg);
-	
 };
 

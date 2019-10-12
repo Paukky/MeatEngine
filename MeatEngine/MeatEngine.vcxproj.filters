@@ -16,6 +16,9 @@
     <Filter Include="Engine">
       <UniqueIdentifier>{e50e3025-9b67-4abf-b84f-f56025c3411c}</UniqueIdentifier>
     </Filter>
+    <Filter Include="EntitySystem">
+      <UniqueIdentifier>{2ab55637-f02d-439c-9aff-7420564b96ca}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -45,6 +48,9 @@
     <ClCompile Include="Texture2D.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="GameObjectManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Engine.h">
@@ -70,6 +76,18 @@
     </ClInclude>
     <ClInclude Include="stb_image.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GameObject.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="EntityManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ImmutableBag.h">
+      <Filter>EntitySystem</Filter>
+    </ClInclude>
+    <ClInclude Include="Component.h">
+      <Filter>EntitySystem</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
